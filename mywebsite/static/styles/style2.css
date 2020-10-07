@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100%; 
+    opacity: 0;
+    transition: opacity 2s;
+    -webkit-transition: opacity 2s; /* Safari */
+    
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: clamp(1em,1em+2vw,3em);
+}
+.main_container {
+    display: flex;
+}
+/* Side Nav bar */
+
+.mainnav {
+    flex: 1%;
+    flex-grow: 1;
+    background-color: #00bfb2;
+    color: black;
+    text-align: center;
+    padding: 20px 5px;
+    
+}
+
+.profile {
+    text-align: center;
+    display: block;
+    font-size: clamp(1em,1em+2vw,3em);
+}
+
+.img_me {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.external_links {
+    display: flex;
+    justify-content: space-evenly;
+}
+.external_links a{
+    color: black;
+
+}
+
+.mainpage{
+    width: 85%;
+    background-color: black;
+    color:  #00bfb2;
+    overflow: auto;
+    flex-grow: 5;
+}
+a:focus {
+    outline: 3px solid red;  
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    text-align: center;
+    font-size: clamp(1em,1em+2vw,3em);
+    list-style: none;
+    padding-top: 5px;
+}
+
+.item{
+    order:1;
+    width: auto;
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+}
+.toggle{
+    display: none;
+}
+
+/* Side Nav Mobile Menu */
+
+@media all and (max-width: 960px) {
+    .toggle{
+        order: 1;
+        cursor: pointer;
+        display: block;
+    }
+    .item{
+        order:2;
+        width: 100%;
+        text-align: center;
+        display: none;  
+    }
+    .active .item{
+        display: block;
+    }
+    .mainnav{
+        width: 100%;
+        height: 10%;
+        padding: 30px 10%
+    }
+    .profile{
+        display: none;
+    }
+}
+
+
+/* Portfolio Category Buttons*/
+
+#myBtnContainer {
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Style the buttons */
+.btn {
+    border: none;
+    margin: 1% 1%;
+    /* padding: 12px 16px; */
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background color on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+  
+  /* Add a dark background color to the active button */
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.btn:focus {
+    outline: 3px solid red;  
+}
+
+/* Portfolio Images */
+
+#portfolioPhotos {
+    /* Prevent vertical gaps */
+    /* line-height: 0;
+    margin-right: 200px;
+    margin-left: 200px; */
+     
+    /* -webkit-column-count: 1;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    1;
+    -moz-column-gap:      0px;
+    column-count:         1;
+    column-gap:           0px;   */
+}
+
+
+#portfolioPhotos img {
+    /* Just in case there are inline attributes */
+    width: 100% !important;
+    height: auto !important;
+}
+
+.project {
+    display: none;
+    padding: 0% 10%;
+    /* padding-bottom: 10px; */
+    /* height: 200px; */
+    /* padding-top: 5px;
+    padding-top: 5px; */
+}
+.image-area{
+    width: 100%;
+    overflow: hidden;
+}
+
+.text-area{
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    font-size: clamp(1em,1em+2vw,3em);
+}
+
+.image-area img{
+    transition: transform .8s ease;
+}
+
+.image-area:hover img{
+    transform: scale(1.1); 
+}
+
+
+.image-area:focus-within{
+    outline: 3px solid red;  
+}
+
+
+.column {
+    display: none; /* Hide all elements by default */
+}
+
+.show-left, .show-right{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.show-left .image-area {
+    order: 1;
+}
+
+.show-left .text-area {
+    order: 2;
+}
+
+
+.show-right .image-area {
+    order: 2
+}
+
+.show-right .text-area{
+    order: 1
+}
+
+@media (max-width: 500px) {
+    .show-left, .show-right{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .show-left .image-area {
+        order: 1;
+    }
+
+    .show-right .image-area {
+        order: 1;
+    }
+
+    .show-left .text-area {
+        order: 2;
+    }
+
+    .show-right .image-area {
+        order: 2;
+    }
+}
+
+
+/* Acessibility */
+
+@media (pointer: coarse) {
+    .btn:hover {
+        background-color: rgb(163, 13, 13);
+    }
+    .image-area:hover img{
+        transform: scale(1.1);
+    }
+  }

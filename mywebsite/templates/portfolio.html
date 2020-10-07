@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Portfolio</h1>
+
+
+<div id="myBtnContainer" class="filter-container">
+    <button class="filter active" onclick="filterSelection('all')"> Show all</button>
+    <button class="filter" onclick="filterSelection('meche')"> Mechanical Design</button>
+    <button class="filter" onclick="filterSelection('elec')"> Electrical Design</button>
+    <button class="filter" onclick="filterSelection('python')"> Python </button>
+    <button class="filter" onclick="filterSelection('unity')"> Unity/C#</button>
+    <button class="filter" onclick="filterSelection('assistive')"> Assistive Tech</button>
+    <button class="filter" onclick="filterSelection('research')"> Research</button>
+    <button class="filter" onclick="filterSelection('art')"> Art</button>
+</div>
+<div id="portfolioPhotos">
+    <div class="project assistive elec">
+        <div class="image-area">
+            <a href="/portfolio/spring">
+                <img src="{{ url_for('static',filename='../static/images/spring-main.png')}}" alt="NEEDED HERE">
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+            <p>
+                La la la la la la
+            </p>
+        </div>
+    </div> 
+    <div class="project assistive python">
+        <div class="image-area">
+            <a href="/portfolio/DSC">
+                <img src="{{ url_for('static',filename='../static/images/dsc-main.png')}}" alt="NEEDED HERE">                
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div> 
+    </div>
+    <div class="project meche unity">
+        <div class="image-area">
+            <a href="/portfolio/augmented">
+                <img src="{{ url_for('static',filename='../static/images/augmented-main.jpg')}}" alt="NEEDED HERE">                
+            </a> 
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div>
+    </div>
+    <div class="project research elec">
+        <div class="image-area">
+            <a href="/portfolio/muon">
+                <img src="{{ url_for('static',filename='../static/images/muon-main.jpg')}}" alt="NEEDED HERE">                
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div> 
+    </div>
+    <div class="project meche">
+        <div class="image-area">
+            <a href="/portfolio/moonshot">
+                <img src="{{ url_for('static',filename='../static/images/moonshot-main.jpg')}}" alt="NEEDED HERE">                
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div> 
+    </div>
+    <div class="project meche">
+        <div class="image-area">
+            <a href="/portfolio/yoyo">
+                <img src="{{ url_for('static',filename='../static/images/yoyo-main.jpg')}}" alt="NEEDED HERE">                
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div> 
+    </div>
+    <div class="project meche elec art">
+        <div class="image-area">
+            <a href="/portfolio/infinity">
+                <img src="{{ url_for('static',filename='../static/images/infinity-main.jpg')}}" alt="NEEDED HERE">                
+            </a> 
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div>
+    </div>
+    <div class="project research elec">
+        <div class="image-area">
+            <a href="/portfolio/ligo">
+                <img src="{{ url_for('static',filename='../static/images/ligo-main.jpg')}}" alt="NEEDED HERE">                
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div> 
+    </div>
+    <div class="project meche unity">
+        <div class="image-area">
+            <a href="/portfolio/SHI">
+                <img src="{{ url_for('static',filename='../static/images/shi-main.jpg')}}" alt="NEEDED HERE">                
+            </a>
+        </div>
+        <div class="text-area">
+            <h2>My Project</h2>
+        </div> 
+    </div>
+</div>
+
+{% endblock %}

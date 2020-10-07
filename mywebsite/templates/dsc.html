@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>DSC Virtual Summer Festival</h1>
+
+<div class="project-description">
+  <button class="accordion"><h2>Overview</h2></button>
+  <div id="overview" class="description-section">
+    <ul>
+      <li><b>Company/Group: </b>Disability Sports Coach</li>
+      <li><b>My Role: </b>Volunteer Coder</li>
+      <li><b>Dates: </b>June 2020 - August 2020</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Details</h2></button>
+  <div id="details" class="description-section">
+    <p>
+      Disability Sports Coach are a UK based charity providing sporting opportunities for children and adults with disabilities. Between 25th-28th August, they held their annual 
+      summer festival virtually, open to anyone around the world.  
+    </p>
+  </div>
+  <button class="accordion"><h2>Problem Description</h2></button>
+  <div id="problem" class="description-section">
+    <p>
+      In order to ensure that the event would be a success, the organisation wanted a number of tasks related to outreach and content creation completed. These included: 
+      <ul>
+        <li>A database of Special Educational Needs (SEN) schools across London </li>
+        <li>A database of active paralympians on Social Media</li>
+        <li>The creation of a promotional paralympic video</li>
+      </ul>
+    </p>
+  </div>
+  <button class="accordion"><h2>Approach</h2></button>
+  <div id="approach" class="description-section">
+    <u>SEN Database</u>
+    <p>
+        Given a list of boroughs in London, I automated the search process using <b>selenium</b> to open a government website that lists all schools in London, filtered
+        the search for SEN schools in each borough, and from the subsequent list of results, taking the relevant information about each school. 
+        Since I was getting information from the same website multiple times, I implemented a rotating list of proxies.
+    </p>
+    <u>Paralympians on Social Media</u>
+    <p>
+      I used <b>Beautiful Soup</b> to extract a list of British Paralympians from a wikipedia page, and cross referenced with an official paralympics website of current athletes.
+      I then used the python <b>Google Search API</b> to find the url for each athletes Twitter and Instagram, if it exists. I used Beautiful soup again to extract the relevant details
+      about their activity, and created a database from this
+    </p>
+    <u>Paralympic Video</u>
+    <p>
+      To create the full video, I used <b>Blender</b> video editing software, and used <b>ffmpeg</b> to compress the video. To ensure accessibility, I also wanted to ensure that
+      all interviews in the video had subtitles. To create subtitles, I wrote a script that would extract the audio from the video, split the audio into chunks based on silent portions
+      and then used the online <b>Google Speech-to-Text</b> to transcribe the content. By combining the text and formatting it into the SRT standard format, I then had subtitles
+      available for all videos
+    </p>
+  </div>
+<div class="main-content">
+  <div class="portfolio dsc">
+    <div class="portfolio-item medium">
+      <a href="{{ url_for('static', filename='images/dsc_collection/Group2.png')}}" data-fancybox="dsc_group" data-caption="A screenshot from the virtual summer festival">
+        <img src="{{ url_for('static', filename='images/dsc_collection/Group2.png')}}" alt="A screenshot from the virtual summer festival with over 20 participants involved in a light
+        yoga session over Zoom">
+      </a>
+    </div>
+    <div class="portfolio-item large">
+      <a href="{{ url_for('static', filename='images/dsc_collection/interview.mp4')}}" data-fancybox="dsc_group" data-caption="An extract from the Interview that I created subtitles for" >
+          <img src="{{ url_for('static', filename='images/dsc_collection/interview_thumbnail.png')}}" alt="A video. An extract from an Interview with Paralympian Kate Grey">
+          <span class="play-button"><i class="fas fa-play"></i></span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

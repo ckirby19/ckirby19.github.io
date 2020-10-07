@@ -1,13 +1,26 @@
-filterSelection("all") // Execute the function and show all columns
+if (document.getElementById("myBtnContainer") != null){
+  filterSelection("all") // Execute the function and show all columns
+}
 
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  var shown = 0;
+  x = document.getElementsByClassName("project");
+  if (c == "all") {
+    c = "";
+  }
   for (i = 0; i < x.length; i++) {
-    RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+    RemoveClass(x[i], "show-left");
+    RemoveClass(x[i], "show-right");
+    if (x[i].className.indexOf(c) > -1) {
+      shown += 1
+      if (shown % 2 != 0){
+        AddClass(x[i], "show-left");
+      }
+      else{
+        AddClass(x[i], "show-right");
+      }
+    }
   }
 }
 
@@ -36,13 +49,18 @@ function RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
+// Get the container element
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+if (btnContainer){
+  // Get all buttons with class="btn" inside the container
+  var btns = btnContainer.getElementsByClassName("filter");
+
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = btnContainer.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
 }

@@ -1,89 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>PORTFOLIO</h1>
-<h2> I am interested in technology for those with neurological and neurodevelopmental disorders. I have tried to design this website with accessibility in mind (as the
-    world wide web was originally intended to <a href="https://www.w3.org/Press/IPO-announce">be</a>). This website can be navigated around using screen readers, keyboard controls
-    only or with voice recognition. This design can also be changed by going to the SOAS (See As Others See) button above. If anything is not working for you, please contact me
-    with the feedback form above.  
-</h2>
-<div id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn" onclick="filterSelection('assitive')"> Assitive Tech</button>
-    <button class="btn" onclick="filterSelection('meche')"> Mechanical Design</button>
-    <button class="btn" onclick="filterSelection('unity')"> Unity/C#</button>
-    <button class="btn" onclick="filterSelection('python')"> Python </button>
-    <button class="btn" onclick="filterSelection('lab')"> Physics Research</button>
-    <button class="btn" onclick="filterSelection('art')"> Art</button>
-</div>
+<h1>About Me</h1>
 
-<!-- Portfolio Gallery Grid -->
+<section class="about-me-section p-3 p-lg-5 theme-bg-light">
+    <div class="container">
+        <div class="profile-teaser media flex-column flex-lg-row"> 
+            <div class="media-body">
+                <h2 class="name font-weight-bold mb-1">Conor Kirby</h2>
+                <div class="tagline mb-3">Engineer &amp; Designer</div>
+                <div class="bio mb-4">
+                    <p>
+                        I am a multi-disciplinary Engineer with a BSc degree in Mechanical Engineering & Physics from MIT and 
+                        currently pursuing a Master's degree in Mechanical Engineering at Imperial College London. I am interested 
+                        in technology for those with neurological and neurodevelopmental disorders. I have tried to design this 
+                        website with accessibility in mind (as the world wide web was originally intended to <a href="https://www.w3.org/Press/IPO-announce">be</a>). 
+                        This website can be navigated around using screen readers, keyboard controls only or with voice recognition.  
+                    </p>
+                    <p>Feel free to contact me by email conorkirby1@gmail.com</p>
+                </div>
+                <div class="mb-4">
+                    <a class="btn btn-secondary mb-3" href="{{ url_for('static',filename='../static/documents/Resume.pdf')}}"><i class="fas fa-file-alt mr-2"></i><span class="d-none d-md-inline">View</span> Resume</a>
+                </div>
+            </div>
+            <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" src="{{ url_for('static',filename='../static/images/me.jpg')}}" alt="">
+        </div>
+    </div>
+</section>
 
-<div class="row">
-    <div class="column text-center assitive meche">
-        <div class="zoom">
-            <a class="img-link" href="/spring">
-                <img src="{{ url_for('static',filename='../static/images/spring-main.png')}}" alt="NEEDED HERE">
-            </a>
-        </div>
-        <h3>MIT Media Lab: Spring</h3>
-    </div>
-    <div class="column text-center lab">
-        <div class="zoom">
-            <a class = "img-link" href="/muon">
-                <img src="{{ url_for('static',filename='../static/images/muon-main.jpg')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>MIT LNS: Cosmic Muon Counter</h3>
-    </div>
-    <div class="column text-center meche unity">
-        <div class="zoom">
-            <a class = "img-link" href="/augmented">
-                <img src="{{ url_for('static',filename='../static/images/augmented-main.jpg')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>Bose: Augmented Reality</h3>
-    </div>
-    <div class="column text-center lab">
-        <div class="zoom">
-            <a class = "img-link" href="/ligo">
-                <img src="{{ url_for('static',filename='../static/images/ligo-main.jpg')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>LIGO: Laser Generation</h3>
-    </div>
-    <div class="column text-center meche unity">
-        <div class="zoom">
-            <a class = "img-link" href="/SHI">
-                <img src="{{ url_for('static',filename='../static/images/robotics-main.jpg')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>SHI: Wall Climbing Robot</h3>
-    </div>
-    <div class="column text-center assitive python">
-        <div class="zoom">
-            <a class = "img-link" href="/DSC">
-                <img src="{{ url_for('static',filename='../static/images/dsc-main.png')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>DSC: Virtual Summer Festival</h3>
-    </div>
-    <div class="column text-center meche">
-        <div class="zoom">
-            <a class = "img-link" href="/yoyo">
-                <img src="{{ url_for('static',filename='../static/images/yoyo-main.jpg')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>MIT: 2.008 Design & Manufacturing II</h3>
-    </div>
-    <div class="column text-center meche art">
-        <div class="zoom">
-            <a class = "img-link" href="/infinity">
-                <img src="{{ url_for('static',filename='../static/images/infinity-main.jpg')}}" alt="NEEDED HERE">                
-            </a> 
-        </div>
-        <h3>Personal: Multidimensional Infinity Mirror</h3>
-    </div>
-</div>
-<!-- END GRID -->
 {% endblock %}
