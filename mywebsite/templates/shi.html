@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Wall Climbing Robot</h1>
+
+<div class="project-description">
+  <button class="accordion"><h2>Overview</h2></button>
+  <div id="overview" class="description-section">
+    <ul>
+      <li><b>Company/Group: </b>Sumitomo Heavy Industries Robotics Group, Japan</li>
+      <li><b>My Role: </b>Mechanical Engineer</li>
+      <li><b>Dates: </b>June 2019 - June 2020</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Details</h2></button>
+  <div id="details" class="description-section">
+    <p>
+       As part of the SHI Robotics Group, a project on a wall climbing robot was being developed. Subject to NDA, further details cannot be revealed. 
+    </p>
+  </div>
+  <button class="accordion"><h2>Problem Description</h2></button>
+  <div id="problem" class="description-section">
+    <p>
+      The current design made it difficult for the robot to navigate on curved surfaces. A redesign of the power transmission system is needed to improve the slope angle limit.
+      At the same time, a simulation of the robot would be useful for testing of line following algorithms for autonomous control of the robot on a surface.
+    </p>
+  </div>
+  <button class="accordion"><h2>Approach</h2></button>
+  <div id="approach" class="description-section">
+    <p>
+       Four initial power transmission systems were designed on Solidworks and compared using a Pugh table, with a focus especially on the width reduction that the power
+       transmission would enable. After deciding upon a design, I then fully developed it and calculated the required gear ratios to maintain the same RPM needed for the 
+       robot to complete the same tasks as before. I constructed and conducted early performance tests on the transmission system and testing continues to occur to refine it.
+       
+       For the simulation, I began by researching other robot simulations in Unity and recreating the real robot body in a simplified form in Blender. After better understanding the 
+       Physics engine used in Unity, I designed the test environment and robot for useful simulations to be created. Some of the simulations included: 
+       <ul>
+        <li>Classical PID controller testing on a flat and bumpy surface</li>
+        <li>Line following using a basic computer vision system</li>
+        <li>Surface adaptive PID controller testing and comparison with a classical PID controller</li>
+        <li>Wall climbing transitions and line following between transitions</li>
+      </ul>
+    </p>
+  </div>
+  <button class="accordion"><h2>Results/Outcome</h2></button>
+  <div id="results" class="description-section">
+    <p>
+      A 30% increase in the angle limit of the slope the robot is able to climb, and a test environment was created in Unity for further research into the best control scheme for 
+      autonomous control of the robot on various surfaces. 
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="portfolio shi">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+      <a href="{{ url_for('static', filename='images/shi_collection/RealRobot1.png')}}" data-fancybox="shi_group" data-caption="The original design of the wall climbing robot was
+      given to me in photo and CAD form for me to work with">
+        <img src="{{ url_for('static', filename='images/shi_collection/RealRobot1.png')}}" alt="A photograph of a 4 wheeled robot with electronics and sensors on top">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+        <a href="{{ url_for('static', filename='images/shi_collection/blender_design.jpg')}}" data-fancybox="shi_group" data-caption="From the CAD design, I created a simplified
+        design of the robot on Blender for use in the Unity software" >
+          <img src="{{ url_for('static', filename='images/shi_collection/blender_design.jpg')}}" alt="A screenshot of a simplified 4 wheel robot design">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+        <a href="{{ url_for('static', filename='images/shi_collection/Robot.png')}}" data-fancybox="shi_group" data-caption="The PID controller was designed to minimise both 
+        the distance and angle error, while also maintaining a target velocity" >
+          <img src="{{ url_for('static', filename='images/shi_collection/Robot.png')}}" alt="A simple sketch of the line following task">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/shi_collection/RobotFromBehind.png')}}" data-fancybox="shi_group" data-caption="In order to test the surface adaptive PID versus
+        the classical PID controller, a test was designed where the robot was placed on a triangle shaped peak so each wheel contact point was at an angle. The red line in each wheel is the 
+        normal vector to the surface" >
+          <img src="{{ url_for('static', filename='images/shi_collection/RobotFromBehind.png')}}" alt="A 4 wheeled robot on a triangle surface, with the middle of the robot over the triangle
+          peak, which has a black line over it">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+        <a href="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" data-fancybox="shi_group" data-caption="For the case where the robot velocity vector
+        is into the page, and wheel is rotating about an axis pointing to the left,  the angle between the red line and a vector opposing gravity gives the factor used for the surface adaptive PID" >
+          <img src="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" alt="Zoom in on one of the spherical wheels, with lines indicating important vectors">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+      <a href="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" data-fancybox="shi_group" data-caption="For the case where the robot velocity vector
+      is into the page, and wheel is rotating about an axis pointing to the left,  the angle between the red line and a vector opposing gravity gives the factor used for the surface adaptive PID" >
+        <img src="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" alt="Zoom in on one of the spherical wheels, with lines indicating important vectors">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/shi_collection/ImageProcessing.png')}}" data-fancybox="shi_group" data-caption="My Caption3" >
+        <img src="{{ url_for('static', filename='images/shi_collection/ImageProcessing.png')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/shi_collection/PerlinNoise.png')}}" data-fancybox="shi_group" data-caption="My Caption4" >
+        <img src="{{ url_for('static', filename='images/shi_collection/PerlinNoise.png')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+        <a href="{{ url_for('static', filename='images/shi_collection/Speed.png')}}" data-fancybox="shi_group" data-caption="My Caption4" >
+          <img src="{{ url_for('static', filename='images/shi_collection/Speed.png')}}" alt="Dummy Image">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span ;">
+        <a href="{{ url_for('static', filename='images/shi_collection/Speed2.png')}}" data-fancybox="shi_group" data-caption="My Caption4" >
+          <img src="{{ url_for('static', filename='images/shi_collection/Speed2.png')}}" alt="Dummy Image">
+        </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

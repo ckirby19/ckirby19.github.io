@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>LIGO Laser Light Generation</h1>
+
+<div class="project-description">
+  <button class="accordion"><h2>Overview</h2></button>
+  <div id="overview" class="description-section">
+    <ul>
+      <li><b>Company/Group: </b>Laser Interferometer Gravitational-Wave Observatory, MIT Kavli Group</li>
+      <li><b>My Role: </b>Research Assistant</li>
+      <li><b>Dates: </b>May 2017 - August 2017</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Details</h2></button>
+  <div id="details" class="description-section">
+    <p>
+      LIGO is the largest gravitational wave observatory in the world, made famous after the first
+      observation of gravitational waves in 2016. The Kavli Institute at MIT conducts ways to 
+      improve the gravitational wave detector so that we can understand more and more about 
+      our universe
+    </p>
+  </div>
+  <button class="accordion"><h2>Problem Description</h2></button>
+  <div id="problem" class="description-section">
+    <p>
+      Green and Red laser frequencies are needed in the experiment, but current power efficiency 
+      in the conversion between frequencies is not optimised. Better efficiency would allow parts
+      of the LIGO experiment to run at lower power levels. 
+    </p>
+  </div>
+  <button class="accordion"><h2>Solution Requirements</h2></button>
+  <div id="requirements" class="description-section">
+    <ul>
+      <li>Apply standard methods to suppress RF noise and interference</li>
+      <li>Use a Pound-Drever-Hall control loop </li>
+      <li>Control for temperature changes and vibrations on the optics table</li>
+      <li>Find the peak resonance point for the laser to generate green light efficiently</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Approach</h2></button>
+  <div id="approach" class="description-section">
+    <p>
+      To breifly explain the thought process for the experiment, a red laser source is manipulated using mirrors and lenses to focus it into a "bow tie cavity", a set of 4 mirrors where laser light can enter. 
+      The distance between these 4 mirrors can be modified very precisely, and at certain lengths the red light will experience resonance and a phenomena called Second Harmonic Generation to produce 
+      green light too. Both of these frequencies then leave the cavity, to be used in the rest of the experiment. To lock the mirrors so that these resonant distances can be maintained constantly, 
+      one of the mirrors is attached to a piezo crystal that moves the mirror based on an error signal, creating a feedback loop. 
+    </p>
+  </div>
+  <button class="accordion"><h2>Results/Outcome</h2></button>
+  <div id="results" class="description-section">
+    <p>
+      Early experiments indicate that the new, "bow tie cavity" design is 10X better than the previous design at converting red light to green light and would theoretically allow
+      parts of LIGO’s laser system to run at lower power. Further research and verification is required before implementation in the real experiment
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="portfolio ligo">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/ligo_collection/Scan82-1.jpg')}}" data-fancybox="ligo_group" data-caption="Early experimental setup drawing">
+          <img src="{{ url_for('static', filename='images/ligo_collection/Scan82-1.jpg')}}" alt="Dummy Image">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/ligo_collection/interference.jpg')}}" data-fancybox="ligo_group" data-caption="I learnt a lot about some of the practical methods 
+      used to suppress noise and interference when dealing with Radio Frequencies. One example is shown here, where cable is wrapped around to make a toroidal 
+      inductor that blocks higher frequency AC signals">
+        <img src="{{ url_for('static', filename='images/ligo_collection/interference.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/ligo_collection/oscilloscope.jpg')}}" data-fancybox="ligo_group" data-caption="Oscilloscope screen: The power output of the red 
+      colour light, showing the peaks at resonance (blue line), power output of green colour light (purple line) and the error signal used by the control loop (green line)" >
+        <img src="{{ url_for('static', filename='images/ligo_collection/oscilloscope.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/ligo_collection/cavitybeam.jpg')}}" data-fancybox="ligo_group" data-caption="I used a camera focused on the red laser light 
+      to see how the intensity fluctuates. This allowed me to find resonance more easily">
+        <img src="{{ url_for('static', filename='images/ligo_collection/cavitybeam.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/ligo_collection/pythonscript.jpg')}}" data-fancybox="ligo_group" data-caption="Python fitter used to find what lenses should 
+      be used and where they should be placed in order to minimize the laser width as it enters the cavity">
+        <img src="{{ url_for('static', filename='images/ligo_collection/pythonscript.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/ligo_collection/circuit_drawing.jpg')}}" data-fancybox="ligo_group" data-caption="A drawing created on Inkscape to showcase 
+      the overall optical layout">
+        <img src="{{ url_for('static', filename='images/ligo_collection/circuit_drawing.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/ligo_collection/ligo-main.jpg')}}" data-fancybox="ligo_group" data-caption="The layout of mirrors, lenses, cameras, oscilloscope,
+        piezo driver and thermal controller" >
+          <img src="{{ url_for('static', filename='images/ligo_collection/ligo-main.jpg')}}" alt="Dummy Image">
+        </a>
+      </div>
+  </div>
+</div>
+{% endblock %}

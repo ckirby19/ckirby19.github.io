@@ -10,8 +10,7 @@
       <li><b>Company/Group: </b>MIT Media Lab, Affective Computing</li>
       <li><b>My Role: </b>Electrical Engineer and Research Assistant</li>
       <li><b>Dates: </b>January 2017-June 2017</li>
-      <!-- TODO: Make it so tabbing does not access this link unless accordion is open -->
-      <li><b>Further Information: </b> Project page on MIT Media Lab website <a class="accordion-link" href="https://www.media.mit.edu/projects/spring/overview/"> here</a></li>
+      <!-- TODO: Make it so tabbing does not access this link unless accordion is open -->    
     </ul>
   </div>
   <button class="accordion"><h2>Details</h2></button>
@@ -56,44 +55,53 @@
 </div>
 <div class="main-content">
   <div class="portfolio spring">
-    <div class="portfolio-item medium">
-      <a href="{{ url_for('static', filename='images/spring_collection/ExplodedView.jpg')}}" data-fancybox="spring_group" data-caption="My Caption 1">
-        <img src="{{ url_for('static', filename='images/spring_collection/ExplodedView.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 3;">
+      <a href="{{ url_for('static', filename='images/spring_collection/ExplodedView.jpg')}}" data-fancybox="spring_group" data-caption="A blown up view of the SPRING design with position of all 
+      electronics and devices. Shapes are placed in the square, circular, triangular and star shaped holes. My work would fit in this same space and replace the reed switches">
+        <img src="{{ url_for('static', filename='images/spring_collection/ExplodedView.jpg')}}" alt="Design shown in CAD, hexagonal layers with electronics between layers.">
       </a>
     </div>
-    <div class="portfolio-item medium">
-      <a href="{{ url_for('static', filename='images/spring_collection/Notes1.jpg')}}" data-fancybox="spring_group" data-caption="My Caption2" >
-        <img src="{{ url_for('static', filename='images/spring_collection/Notes1.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
+      <a href="{{ url_for('static', filename='images/spring_collection/Notes1_2.jpg')}}" data-fancybox="spring_group" data-caption="My original idea involved a hall effect sensor array
+      used to detect the position of the blocks as they are moved" >
+        <img src="{{ url_for('static', filename='images/spring_collection/Notes1_2.jpg')}}" alt="Notebook with sketches of two hall effect arrangements">
       </a>
     </div>
-    <div class="portfolio-item medium">
-      <a href="{{ url_for('static', filename='images/spring_collection/HallEffectTest1.jpg')}}" data-fancybox="spring_group" data-caption="My Caption3" >
-        <img src="{{ url_for('static', filename='images/spring_collection/HallEffectTest1.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 3;">
+      <a href="{{ url_for('static', filename='images/spring_collection/HallEffectTest1.jpg')}}" data-fancybox="spring_group" data-caption="Simple test for the hall effect sensor 
+      output voltage dependence on x,y and z axis movement of a magnet, in order to compare different sensors and their active ranges" >
+        <img src="{{ url_for('static', filename='images/spring_collection/HallEffectTest1.jpg')}}" alt="A hall effect sensor underneath a piece of cardboard with a magnet on it">
       </a>
     </div>
-    <div class="portfolio-item medium">
-      <a href="{{ url_for('static', filename='images/spring_collection/HallEffectTest2.jpg')}}" data-fancybox="spring_group" data-caption="My Caption4" >
-        <img src="{{ url_for('static', filename='images/spring_collection/HallEffectTest2.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 3;">
+      <a href="{{ url_for('static', filename='images/spring_collection/HallEffectTest2.jpg')}}" data-fancybox="spring_group" data-caption="This was the method I designed to test 
+      two hall effect sensors placed perpendicularly. This allowed us to test the effectiveness of this arrangement for 3D proximity detection.
+      " >
+        <img src="{{ url_for('static', filename='images/spring_collection/HallEffectTest2.jpg')}}" alt="An L shaped piece of wood, with a hall effect sensor on each face">
       </a>
     </div>
-    <div class="portfolio-item large_wide">
-      <a href="{{ url_for('static', filename='images/spring_collection/Notes2_2.jpg')}}" data-fancybox="spring_group" data-caption="My Caption5" >
-        <img src="{{ url_for('static', filename='images/spring_collection/Notes2_2.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
+      <a href="{{ url_for('static', filename='images/spring_collection/Notes2_2.jpg')}}" data-fancybox="spring_group" data-caption="An amplifier circuit was needed for the piezo
+      circuit output. I designed the circuit on paper before creating it on EAGLE" >
+        <img src="{{ url_for('static', filename='images/spring_collection/Notes2_2.jpg')}}" alt="Notebook with circuit diagram and calculations">
       </a>
     </div>
-    <div class="portfolio-item large_wide">
-      <a href="{{ url_for('static', filename='images/spring_collection/EagleDesign.jpg')}}" data-fancybox="spring_group" data-caption="My Caption6" >
-        <img src="{{ url_for('static', filename='images/spring_collection/EagleDesign.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/spring_collection/EagleDesign.jpg')}}" data-fancybox="spring_group" data-caption="The circuit diagram for piezo amplifier created on EAGLE, with surface-mount
+      electronics. Circuit is not converted to code used for a CNC PCB mill. Red lines show wires, yellow shows components and green shows inputs and outputs " >
+        <img src="{{ url_for('static', filename='images/spring_collection/EagleDesign.jpg')}}" alt="A screenshot from the EAGLE software">
       </a>
     </div>
-    <div class="portfolio-item medium">
-      <a href="{{ url_for('static', filename='images/spring_collection/PCBMill.jpg')}}" data-fancybox="spring_group" data-caption="My Caption7" >
-        <img src="{{ url_for('static', filename='images/spring_collection/PCBMill.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 3;">
+      <a href="{{ url_for('static', filename='images/spring_collection/PCBMill.jpg')}}" data-fancybox="spring_group" data-caption="I Created the single layer PCB on a CNC mill using 
+      the EAGLE file. The cutter cuts away the parts that are not part of the circuit, thus separating the circuit from the rest of the copper" >
+        <img src="{{ url_for('static', filename='images/spring_collection/PCBMill.jpg')}}" alt="A piece of copper on a platform, with a small sharp cutter used to create a circuit">
       </a>
     </div>
-    <div class="portfolio-item large_wide">
-      <a href="{{ url_for('static', filename='images/spring_collection/PiezoCircuit.jpg')}}" data-fancybox="spring_group" data-caption="My Caption8" >
-        <img src="{{ url_for('static', filename='images/spring_collection/PiezoCircuit.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/spring_collection/PiezoCircuit.jpg')}}" data-fancybox="spring_group" data-caption="Final circuit with surface mount components,
+      piezo device as input and yellow wires at output" >
+        <img src="{{ url_for('static', filename='images/spring_collection/PiezoCircuit.jpg')}}" alt="A photograph of the final circuit, with 3 millimetre wide components">
       </a>
     </div>
   </div>

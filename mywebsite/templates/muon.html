@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Miniature cosmic muon counter</h1>
+
+<div class="project-description">
+  <button class="accordion"><h2>Overview</h2></button>
+  <div id="overview" class="description-section">
+    <ul>
+      <li><b>Company/Group: </b> Laboratory of Nuclear Science (LNS), MIT</li>
+      <li><b>My Role: </b>Research Assistant</li>
+      <li><b>Dates: </b>September 2015 - August 2016</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Details</h2></button>
+  <div id="details" class="description-section">
+    <p>
+      The LNS, with the IceCube group in Wisconsin, are focused on a Neutrino Observatory in the South Pole that uses spherical optical sensors placed deep in the ice to detect the 
+      produced radiation when Neutrinos travel through the ice and interact. As part of this research, the group was also working on a small desktop muon counter to provide well defined
+      tracking of the muons created during the experiment. The counter would also become a teaching tool for undergraduates  
+    </p>
+  </div>
+  <button class="accordion"><h2>Approach</h2></button>
+  <div id="approach" class="description-section">
+    <p>
+      In brief, the device works by using a piece of scintillator attached to a Silicon PhotoMultiplier (SiPM). The scintillator is excited by charged particles (Muons in this case) 
+      going through it, and produces light in response, which the photomultiplier then receives and creates a voltage in response. In order to prevent the photomultipliers from 
+      reacting to the billions of photons from the lights sources around us, these components are places in a light tight aluminium box that muons can penetrate but photons cannot. 
+      This voltage signal is then amplified and digitilised so that it can be read by an arduino and an event is recorded to an OLED screen.
+
+      My role was to work alongside a graduate student to test different design aspects of the device to see what could be improved, as well as to work on building my own one to 
+      test how viable this is as an undergraduate project. As part of the team, I was responsible for creating an inexpensive, light tight enclosure from which different 
+      light sensitive components could be compared, such as SiPMs and photodiodes, allowing us to debug these components easily and compare their effectiveness. 
+      Making the device also involved CAD design, milling, soldering, signal processing and electronics design and testing. 
+    </p>
+  </div>
+  <button class="accordion"><h2>Results/Outcome</h2></button>
+  <div id="results" class="description-section">
+    <p>
+      A <a href="https://arxiv.org/abs/1606.01196">published paper</a> from this work, and an article about the work published on 
+      <a href="https://www.symmetrymagazine.org/article/the-100-muon-detector">Symmetry Magazine</a></li>
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="portfolio muon">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/muon_collection/complete.jpg')}}" data-fancybox="muon_group" data-caption="Early experimental setup drawing">
+          <img src="{{ url_for('static', filename='images/muon_collection/complete.jpg')}}" alt="Dummy Image">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/muon_collection/LightTightBox.jpg')}}" data-fancybox="muon_group" data-caption="I learnt a lot about some of the practical methods 
+      used to suppress noise and interference when dealing with Radio Frequencies. One example is shown here, where cable is wrapped around to make a toroidal 
+      inductor that blocks higher frequency AC signals">
+        <img src="{{ url_for('static', filename='images/muon_collection/LightTightBox.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/muon_collection/schematics.jpg')}}" data-fancybox="muon_group" data-caption="Python fitter used to find what lenses should 
+        be used and where they should be placed in order to minimize the laser width as it enters the cavity">
+          <img src="{{ url_for('static', filename='images/muon_collection/schematics.jpg')}}" alt="Dummy Image">
+        </a>
+      </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/muon_collection/muon-event.jpg')}}" data-fancybox="muon_group" data-caption="I used a camera focused on the red laser light 
+      to see how the intensity fluctuates. This allowed me to find resonance more easily">
+        <img src="{{ url_for('static', filename='images/muon_collection/muon-event.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/muon_collection/Electronics.jpg')}}" data-fancybox="muon_group" data-caption="Oscilloscope screen: The power output of the red 
+        colour light, showing the peaks at resonance (blue line), power output of green colour light (purple line) and the error signal used by the control loop (green line)" >
+          <img src="{{ url_for('static', filename='images/muon_collection/Electronics.jpg')}}" alt="Dummy Image">
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/muon_collection/Electronics2.jpg')}}" data-fancybox="muon_group" data-caption="Oscilloscope screen: The power output of the red 
+        colour light, showing the peaks at resonance (blue line), power output of green colour light (purple line) and the error signal used by the control loop (green line)" >
+          <img src="{{ url_for('static', filename='images/muon_collection/Electronics2.jpg')}}" alt="Dummy Image">
+        </a>
+      </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
+      <a href="{{ url_for('static', filename='images/muon_collection/muon-main.jpg')}}" data-fancybox="muon_group" data-caption="Python fitter used to find what lenses should 
+      be used and where they should be placed in order to minimize the laser width as it enters the cavity">
+        <img src="{{ url_for('static', filename='images/muon_collection/muon-main.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

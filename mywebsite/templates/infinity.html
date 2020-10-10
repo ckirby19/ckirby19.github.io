@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Multidimensional Infinity Mirror</h1>
+
+<div class="project-description">
+  <button class="accordion"><h2>Overview</h2></button>
+  <div id="overview" class="description-section">
+    <ul>
+      <li><b>Company/Group: </b>Personal Project</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Details</h2></button>
+  <div id="details" class="description-section">
+    <p>
+      After using mirror film for much of Summer 2018 and finding myself with plenty of it spare, I wanted to see what else I could 
+      do with it. I came across a short video of a dodecahedron infinity mirror and was amazed by its beauty and deep-space feeling. 
+      Without an explanation of how it was designed, I decided to try and make it myself using the spare mirror film that I had 
+      available.  
+    </p>
+  </div>
+  <button class="accordion"><h2>Design Constraints</h2></button>
+  <div id="requirements" class="description-section">
+    <ul>
+      <li>Thickness of clear acrylic available to me</li>
+      <li>Physical dimensions of the LED strips</li>
+      <li>Power requirements to run the electronics safely</li>
+      <li>Mechanical connections needed to hold the shape together and allow for it to be carried</li>
+    </ul>
+  </div>
+  <button class="accordion"><h2>Approach</h2></button>
+  <div id="approach" class="description-section">
+    <p>
+      I began by calculating the required angles to form a dodecahedron, and designed it in Solidworks parametrically so that I could vary the edge length. By calculating the number
+      of total LEDs that would be needed given the total edge length and the LEDs per metre, I also found the total current and thus power supply required to run the LEDs.
+      I 3D printed the sides and connectors, laser cut the hexagon faces and applied mirror film to each face.  
+    </p>
+  </div>
+  <button class="accordion"><h2>Results/Outcome</h2></button>
+  <div id="results" class="description-section">
+    <p>
+      See below and let me know if you have any cool ideas that could add to it! I envision other shapes, like hypercubes or rotating components with LEDS on the inside to create
+      a Persistance Of Vision (POV) system. The final picture below shows a small concept piece I made with POV in mind
+    </p>
+  </div>
+</div>
+<div class="main-content">
+  <div class="portfolio infinity">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/infinity_collection/Partial.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption 1">
+        <img src="{{ url_for('static', filename='images/infinity_collection/Partial.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
+      <a href="{{ url_for('static', filename='images/infinity_collection/BluePartial.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption2" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/BluePartial.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+        <a href="{{ url_for('static', filename='images/infinity_collection/halfshape.mp4')}}" data-fancybox="infinity_group" data-caption="My Caption8" >
+            <img src="{{ url_for('static', filename='images/infinity_collection/halfshape_thumbnail.jpg')}}" alt="Dummy Image">
+            <span class="play-button"><i class="fas fa-play" style="color:white;"></i></span>
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
+        <a href="{{ url_for('static', filename='images/infinity_collection/top.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption5" >
+          <img src="{{ url_for('static', filename='images/infinity_collection/top.jpg')}}" alt="Dummy Image">
+        </a>
+      </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/infinity_collection/red.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption3" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/red.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/infinity_collection/yellow.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption4" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/yellow.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
+        <a href="{{ url_for('static', filename='images/infinity_collection/Finalbuild.mp4')}}" data-fancybox="infinity_group" data-caption="My Caption8" >
+            <img src="{{ url_for('static', filename='images/infinity_collection/Finalbuild_thumbnail.jpg')}}" alt="Dummy Image">
+            <span class="play-button"><i class="fas fa-play" style="color:white;"></i></span>
+        </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/infinity_collection/V2.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption4" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/V2.jpg')}}" alt="Dummy Image">
+      </a>
+    </div>
+    
+  </div>
+</div>
+{% endblock %}
