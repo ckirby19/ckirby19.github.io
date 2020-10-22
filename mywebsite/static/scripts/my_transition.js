@@ -1,6 +1,8 @@
 const swup = new Swup();
 
 function init() {
+
+
     // For accordion text
     var acc = document.getElementsByClassName("accordion");
     if (acc != null){
@@ -100,3 +102,8 @@ function init() {
 
 init();
 document.addEventListener('swup:contentReplaced', init);
+
+// Go to top of page on load
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
