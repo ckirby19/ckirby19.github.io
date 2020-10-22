@@ -24,94 +24,6 @@
 
 </head> 
 <body>
-            <!-- <span>
-                <a class="nav-link" onclick=record() onkeypress=record()><i class="fas fa-microphone fa-fw mr-2"></i>Voice Navigation</a>
-            </span>
-            <span>
-                <a class="nav-link active" href="/home"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/other"><i class="fas fa-laptop-code fa-fw mr-2"></i>Other Sites</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/spring"><i class="fab fa-accessible-icon fa-fw mr-2"></i>SPRING</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/augmented"><i class="fas fa-cogs fa-fw mr-2"></i>Augmented</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/moonshot"><i class="fas fa-cogs fa-fw mr-2"></i>Moonshot</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/yoyo"><i class="fas fa-cogs fa-fw mr-2"></i>Yo-yo</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/SHI"><i class="fas fa-cogs fa-fw mr-2"></i>Sumitomo</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/DSC"><i class="fab fa-accessible-icon fa-fw mr-2"></i>Volunteer</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/infinity"><i class="fas fa-brush fa-fw mr-2"></i>Infinity</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/ligo"><i class="fas fa-tape fa-fw mr-2"></i>LIGO</a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio/muon"><i class="fas fa-tape fa-fw mr-2"></i>Muon</a>
-            </span> -->	    
-        <!-- <nav class="navbar navbar-expand-lg" >
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navigation" class="collapse navbar-collapse divided" >
-                <span>
-                    <a class="microphone" onclick=record() onkeypress=record()><i class="fas fa-microphone fa-fw mr-2">Voice Navigation</i></a>
-                </span>
-                <span class="divider"></span>
-                <span>
-                    <a class="nav-link active" href="/home"><i class="fas fa-user fa-fw mr-2"></i>About Me <br> əˈbaʊt mi </a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/other"><i class="fas fa-laptop-code fa-fw mr-2"></i>Other Sites</a>
-                </span>
-                <span class="divider"></span>
-                <span>
-                    <a class="nav-link" href="/portfolio/spring"><i class="fab fa-accessible-icon fa-fw mr-2"></i>SPRING</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/augmented"><i class="fas fa-cogs fa-fw mr-2"></i>Augmented</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/moonshot"><i class="fas fa-cogs fa-fw mr-2"></i>Moonshot</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/yoyo"><i class="fas fa-cogs fa-fw mr-2"></i>Yoyo</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/SHI"><i class="fas fa-cogs fa-fw mr-2"></i>SHI</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/DSC"><i class="fab fa-accessible-icon fa-fw mr-2"></i>DSC</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/infinity"><i class="fas fa-brush fa-fw mr-2"></i>Infinity</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/ligo"><i class="fas fa-tape fa-fw mr-2"></i>LIGO</a>
-                </span>
-                <span>
-                    <a class="nav-link" href="/portfolio/muon"><i class="fas fa-tape fa-fw mr-2"></i>Muon</a>
-                </span>
-                <span class="divider"></span>
-            </div>
-        </nav> -->
     <header>
         <div id="navigation">
             <div class="logo">
@@ -180,7 +92,9 @@
     <script src="{{ url_for('static',filename='../static/scripts/portfolio_images.js')}}"></script>
     <!-- swup transitions -->
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>   
+
     <!-- My Javascript-->
+    <script src="{{ url_for('static',filename='../static/scripts/SwupScrollPlugin.js')}}"></script>
     
     <!-- <script src="{{ url_for('static',filename='../static/scripts/mobile_menu.js')}}"></script>   --> 
     <script defer src="{{ url_for('static',filename='../static/scripts/my_transition.js')}}"></script> 

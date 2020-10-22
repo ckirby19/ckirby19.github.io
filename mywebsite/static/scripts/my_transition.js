@@ -1,4 +1,31 @@
-const swup = new Swup();
+const options = {
+    animationSelector: '[class*="transition-fade"]',
+    animateHistoryBrowsing: true,
+    animateScroll: false,
+    plugins: [
+
+        new SwupScrollPlugin({
+            animateScroll: false
+        })
+    ]
+};
+
+
+let scrollValues = {};
+
+const swup = new Swup(options);
+
+
+swup.on('clickLink', () => {
+    scrollValues[window.location.href] = window.scrollY;
+});
+
+swup.on('popState', () => {
+    setTimeout(function() {
+        window.scrollTo(0, scrollValues[window.location.href]);
+    }, 100);
+});
+
 
 function init() {
 
@@ -103,7 +130,3 @@ function init() {
 init();
 document.addEventListener('swup:contentReplaced', init);
 
-// Go to top of page on load
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-}
