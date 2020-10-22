@@ -11,39 +11,39 @@ def portfolio():
     return render_template("portfolio.html")
 
 # Portfolio Links
-@app.route("/portfolio/spring")
+@app.route("/spring")
 def spring():
     return render_template("spring.html")
 
-@app.route("/portfolio/muon")
+@app.route("/muon")
 def muon():
     return render_template("muon.html")
 
-@app.route("/portfolio/augmented")
+@app.route("/augmented")
 def augmented():
     return render_template("augmented.html")
 
-@app.route("/portfolio/ligo")
+@app.route("/ligo")
 def ligo():
     return render_template("ligo.html")
 
-@app.route("/portfolio/DSC")
+@app.route("/DSC")
 def dsc():
     return render_template("dsc.html")
 
-@app.route("/portfolio/SHI")
+@app.route("/SHI")
 def shi():
     return render_template("shi.html")
 
-@app.route("/portfolio/yoyo")
+@app.route("/yoyo")
 def yoyo():
     return render_template("yoyo.html")
 
-@app.route("/portfolio/moonshot")
+@app.route("/moonshot")
 def moonshot():
     return render_template("moonshot.html")
 
-@app.route("/portfolio/infinity")
+@app.route("/infinity")
 def infinity():
     return render_template("infinity.html")
 

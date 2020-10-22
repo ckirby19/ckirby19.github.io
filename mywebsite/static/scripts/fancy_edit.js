@@ -1,5 +1,8 @@
-jQuery.extend(jQuery.fancybox.defaults, {
-    video: {
-        autoStart: false
-      }
+// jQuery.extend(jQuery.fancybox.defaults, {
+//     history: false,
+
+//   });
+
+$("#fancybox").fancybox({
+    history: false
   });

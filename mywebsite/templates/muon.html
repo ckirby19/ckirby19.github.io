@@ -37,53 +37,46 @@
   <button class="accordion"><h2>Results/Outcome</h2></button>
   <div id="results" class="description-section">
     <p>
-      A <a href="https://arxiv.org/abs/1606.01196">published paper</a> from this work, and an article about the work published on 
-      <a href="https://www.symmetrymagazine.org/article/the-100-muon-detector">Symmetry Magazine</a></li>
+      A <a href="https://arxiv.org/abs/1606.01196"><b>published paper</b></a> from this work, and an article about the work published on 
+      <a href="https://www.symmetrymagazine.org/article/the-100-muon-detector"><b>Symmetry Magazine</b></a></li>
     </p>
   </div>
 </div>
 <div class="main-content">
   <div class="portfolio muon">
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-        <a href="{{ url_for('static', filename='images/muon_collection/complete.jpg')}}" data-fancybox="muon_group" data-caption="Early experimental setup drawing">
-          <img src="{{ url_for('static', filename='images/muon_collection/complete.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+        <a href="{{ url_for('static', filename='images/muon_collection/complete.jpg')}}" data-no-swup data-fancybox="muon_group" data-caption="Blown up view of full device">
+          <img src="{{ url_for('static', filename='images/muon_collection/complete.jpg')}}" alt="A CAD rendering">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-      <a href="{{ url_for('static', filename='images/muon_collection/LightTightBox.jpg')}}" data-fancybox="muon_group" data-caption="I learnt a lot about some of the practical methods 
-      used to suppress noise and interference when dealing with Radio Frequencies. One example is shown here, where cable is wrapped around to make a toroidal 
-      inductor that blocks higher frequency AC signals">
-        <img src="{{ url_for('static', filename='images/muon_collection/LightTightBox.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/muon_collection/LightTightBox.jpg')}}" data-no-swup data-fancybox="muon_group" data-caption="Light tight box design to prevent
+      ambient light from entering the light-detector circuit. BNC cable used to get signal out.">
+        <img src="{{ url_for('static', filename='images/muon_collection/LightTightBox.jpg')}}" alt="A CAD rendering showing both halves of box design">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-        <a href="{{ url_for('static', filename='images/muon_collection/schematics.jpg')}}" data-fancybox="muon_group" data-caption="Python fitter used to find what lenses should 
-        be used and where they should be placed in order to minimize the laser width as it enters the cavity">
-          <img src="{{ url_for('static', filename='images/muon_collection/schematics.jpg')}}" alt="Dummy Image">
+        <a href="{{ url_for('static', filename='images/muon_collection/schematics.jpg')}}" data-no-swup data-fancybox="muon_group" data-caption="SIPM picks up signal which is then
+        amplified, and peak detector is used to detect the highest amplitude in the signal. Signal digitilised and sent to Arduino">
+          <img src="{{ url_for('static', filename='images/muon_collection/schematics.jpg')}}" alt="Detailed circuit diagram of device. Amplifier, ">
         </a>
       </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-      <a href="{{ url_for('static', filename='images/muon_collection/muon-event.jpg')}}" data-fancybox="muon_group" data-caption="I used a camera focused on the red laser light 
-      to see how the intensity fluctuates. This allowed me to find resonance more easily">
-        <img src="{{ url_for('static', filename='images/muon_collection/muon-event.jpg')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/muon_collection/muon-event.jpg')}}" data-no-swup data-fancybox="muon_group" data-caption="The voltage output from the light tight 
+      box during a muon event shown on oscilloscope. The rest of the circuit is needed to process this signal">
+        <img src="{{ url_for('static', filename='images/muon_collection/muon-event.jpg')}}" alt="Signal from Aluminium box, shown on oscilloscope">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-        <a href="{{ url_for('static', filename='images/muon_collection/Electronics.jpg')}}" data-fancybox="muon_group" data-caption="Oscilloscope screen: The power output of the red 
-        colour light, showing the peaks at resonance (blue line), power output of green colour light (purple line) and the error signal used by the control loop (green line)" >
-          <img src="{{ url_for('static', filename='images/muon_collection/Electronics.jpg')}}" alt="Dummy Image">
+        <a href="{{ url_for('static', filename='images/muon_collection/Electronics.jpg')}}" data-no-swup data-fancybox="muon_group" data-caption="We placed the rest of the circuit in 
+        a hollowed out ethernet box, with holes cut out for power supply and aluminium panel fitted at the back for grounding.">
+          <img src="{{ url_for('static', filename='images/muon_collection/Electronics.jpg')}}" alt="Photograph of electronics circuit with coloured wires ">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-        <a href="{{ url_for('static', filename='images/muon_collection/Electronics2.jpg')}}" data-fancybox="muon_group" data-caption="Oscilloscope screen: The power output of the red 
-        colour light, showing the peaks at resonance (blue line), power output of green colour light (purple line) and the error signal used by the control loop (green line)" >
-          <img src="{{ url_for('static', filename='images/muon_collection/Electronics2.jpg')}}" alt="Dummy Image">
-        </a>
-      </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
-      <a href="{{ url_for('static', filename='images/muon_collection/muon-main.jpg')}}" data-fancybox="muon_group" data-caption="Python fitter used to find what lenses should 
-      be used and where they should be placed in order to minimize the laser width as it enters the cavity">
-        <img src="{{ url_for('static', filename='images/muon_collection/muon-main.jpg')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/muon_collection/muon-main.jpg')}}" data-no-swup data-fancybox="muon_group" data-caption="The green light flashes whenever
+      a muon event is counted, with OLED screen showing total count, run time and muon count rate">
+        <img src="{{ url_for('static', filename='images/muon_collection/muon-main.jpg')}}" alt="An aluminium box sitting on a white container, with screen displaying data next to it">
       </a>
     </div>
   </div>

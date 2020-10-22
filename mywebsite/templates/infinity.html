@@ -31,9 +31,9 @@
   <button class="accordion"><h2>Approach</h2></button>
   <div id="approach" class="description-section">
     <p>
-      I began by calculating the required angles to form a dodecahedron, and designed it in Solidworks parametrically so that I could vary the edge length. By calculating the number
+      I began by calculating the required angles to form a dodecahedron, and designed it in <b>Solidworks</b> parametrically so that I could vary the edge length. By calculating the number
       of total LEDs that would be needed given the total edge length and the LEDs per metre, I also found the total current and thus power supply required to run the LEDs.
-      I 3D printed the sides and connectors, laser cut the hexagon faces and applied mirror film to each face.  
+      I <b>3D printed</b> the sides and connectors, <b>laser cut</b> the hexagon faces and applied mirror film to each face.  
     </p>
   </div>
   <button class="accordion"><h2>Results/Outcome</h2></button>
@@ -47,45 +47,51 @@
 <div class="main-content">
   <div class="portfolio infinity">
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
-      <a href="{{ url_for('static', filename='images/infinity_collection/Partial.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption 1">
-        <img src="{{ url_for('static', filename='images/infinity_collection/Partial.jpg')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/infinity_collection/Partial.jpg')}}" data-no-swup data-fancybox="infinity_group" data-caption="The design was created in two halves
+      with each side wired and tested individually before joining.">
+        <img src="{{ url_for('static', filename='images/infinity_collection/Partial.jpg')}}" alt="six sides of a dodecahedron attached, shown sitting on a table, LEDs not on">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
-      <a href="{{ url_for('static', filename='images/infinity_collection/BluePartial.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption2" >
-        <img src="{{ url_for('static', filename='images/infinity_collection/BluePartial.jpg')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/infinity_collection/BluePartial.jpg')}}" data-no-swup data-fancybox="infinity_group" data-caption="I tested strips of LEDs often to check
+      for failure points and fixed it as I went along. I was also able to visualise the final look of the piece from the half shape" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/BluePartial.jpg')}}" alt="six sides of a dodecahedron attached, shown sitting on a table, LEDs showing a deep Blue">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
-        <a href="{{ url_for('static', filename='images/infinity_collection/halfshape.mp4')}}" data-fancybox="infinity_group" data-caption="My Caption8" >
-            <img src="{{ url_for('static', filename='images/infinity_collection/halfshape_thumbnail.jpg')}}" alt="Dummy Image">
+        <a href="{{ url_for('static', filename='images/infinity_collection/halfshape.mp4')}}" data-no-swup data-fancybox="infinity_group" data-caption="After fixing the wiring
+        and adding more interesting arduino code, one half of the piece was complete" >
+            <img src="{{ url_for('static', filename='images/infinity_collection/halfshape_thumbnail.jpg')}}" alt="The same half-dodecahedron with LEDs changing colour across the rainbow">
             <span class="play-button"><i class="fas fa-play" style="color:white;"></i></span>
         </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
-        <a href="{{ url_for('static', filename='images/infinity_collection/top.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption5" >
-          <img src="{{ url_for('static', filename='images/infinity_collection/top.jpg')}}" alt="Dummy Image">
+        <a href="{{ url_for('static', filename='images/infinity_collection/top.jpg')}}" data-no-swup data-fancybox="infinity_group" data-caption="From above" >
+          <img src="{{ url_for('static', filename='images/infinity_collection/top.jpg')}}" alt="A photograph showing the infinity effect - lights reflect and go on forever">
         </a>
       </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
-      <a href="{{ url_for('static', filename='images/infinity_collection/red.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption3" >
-        <img src="{{ url_for('static', filename='images/infinity_collection/red.jpg')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/infinity_collection/red.jpg')}}" data-no-swup data-fancybox="infinity_group" data-caption="" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/red.jpg')}}" alt="The full piece is shown from an angle, the lights on a reddish hue">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
-      <a href="{{ url_for('static', filename='images/infinity_collection/yellow.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption4" >
-        <img src="{{ url_for('static', filename='images/infinity_collection/yellow.jpg')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/infinity_collection/yellow.jpg')}}" data-no-swup data-fancybox="infinity_group" data-caption="" >
+        <img src="{{ url_for('static', filename='images/infinity_collection/yellow.jpg')}}" alt="The full piece is shown from an angle, the lights on a yellowish hue">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 5;">
-        <a href="{{ url_for('static', filename='images/infinity_collection/Finalbuild.mp4')}}" data-fancybox="infinity_group" data-caption="My Caption8" >
-            <img src="{{ url_for('static', filename='images/infinity_collection/Finalbuild_thumbnail.jpg')}}" alt="Dummy Image">
+        <a href="{{ url_for('static', filename='images/infinity_collection/Finalbuild.mp4')}}" data-no-swup data-fancybox="infinity_group" data-caption="The final build - some
+        room for improvement in the surface reflectivity and there were difficulties removing all the bubbles from the surface" >
+            <img src="{{ url_for('static', filename='images/infinity_collection/Finalbuild_thumbnail.jpg')}}" alt="A video where I move my camera along the outside of the piece, showing
+            it from many angles">
             <span class="play-button"><i class="fas fa-play" style="color:white;"></i></span>
         </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
-      <a href="{{ url_for('static', filename='images/infinity_collection/V2.jpg')}}" data-fancybox="infinity_group" data-caption="My Caption4" >
-        <img src="{{ url_for('static', filename='images/infinity_collection/V2.jpg')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/infinity_collection/V2.jpg')}}" data-no-swup data-fancybox="infinity_group" data-caption="I worked on a second version of the 
+      piece, using a Persistance of Vision device with a single line of LEDs wrapped around a spinning arc, inside a box with reflective film. " >
+        <img src="{{ url_for('static', filename='images/infinity_collection/V2.jpg')}}" alt="Several streaks of light inside of a box">
       </a>
     </div>
     

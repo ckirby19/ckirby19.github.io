@@ -26,11 +26,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.28"
-     inkscape:cx="342.15161"
-     inkscape:cy="694.8989"
+     inkscape:cx="494.06553"
+     inkscape:cy="849.01664"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      showborder="false"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-global="false"
@@ -43,7 +43,35 @@
      inkscape:window-height="1271"
      inkscape:window-x="2391"
      inkscape:window-y="-9"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4533" />
+    <sodipodi:guide
+       position="131.15479,150.95"
+       orientation="0,1"
+       id="guide4535"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="175.33,188.92904"
+       orientation="1,0"
+       id="guide4537"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="166.19141,266.34033"
+       orientation="0,-793.70079"
+       id="guide4539"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="33.89974,188.30892"
+       orientation="1122.5197,0"
+       id="guide4541"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -52,7 +80,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

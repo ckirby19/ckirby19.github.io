@@ -3,21 +3,65 @@
 
 <h1>About Me</h1>
 
-<section class="about-me-section p-3 p-lg-5 theme-bg-light">
+<div class="main-content">
+    <div class="profile">
+        <div class="textblock">
+            <h2 class="name">Conor Kirby</h2>
+            <div class="tagline">Engineer &amp; Researcher</div>
+            <div class="bio">
+                <p>
+                    I am a multi-disciplinary Engineer with a BSc in Mechanical Engineering & Physics from MIT and 
+                    currently pursuing a MSc in Advanced Mechanical Engineering at Imperial College London. 
+                </p>
+                <p>
+                    I am interested in technology for those with neurological and neurodevelopmental disorders. I aspire to create things that enable independence and empower 
+                    the user. 
+                </p>
+                <p>
+                    I have tried to design this website to be as accessible as possible. Clicking on the microphone icon will also enable Voice Navigation (it must be clicked
+                    each time to use it) and by saying the name of one of the pages below, it will open. IPA is also given for pronunciation. If you have any difficulties navigating this website, please let me know
+                </p>
+                <p>Feel free to <a class= "mail" href="mailto:conorkirby1@gmail.com"> <b>Contact me by email</b></a> or <a class="open-pdf-resume" href="{{ url_for('static',filename='../static/documents/Resume.pdf')}}"><b>View my Resume</b></a></p>
+                <ul id="socialContainer" class="navbar-nav flex-column text-left">
+                    <li class="social-item">
+                        Connect with me: <a class="social-link" href="https://www.linkedin.com/in/conor-kirby-631b0b124/"><i class="fab fa-linkedin-in fa-fw"></i><b>LinkedIn</b></a>
+                    </li>
+                    <li class="social-item">
+                        Code with me: <a class="social-link" href="https://github.com/ckirby19"><i class="fab fa-github fa-fw"></i><b>Github</b></a>
+                    </li>
+                    <li class="social-item">
+                        Draw with me: <a class="social-link" href="https://www.artstation.com/ckirby97"><i class="fab fa-artstation fa-fw"></i><b>ArtStation</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile-image">
+            <img src="{{ url_for('static',filename='../static/images/me.jpg')}}" alt="A black and white photograph of me in a suit and bowtie">
+        </div>
+    </div>
+</div>
+
+<!-- <section class="about-me-section p-3 p-lg-5 theme-bg-light">
     <div class="container">
         <div class="profile-teaser media flex-column flex-lg-row"> 
             <div class="media-body">
                 <h2 class="name font-weight-bold mb-1">Conor Kirby</h2>
-                <div class="tagline mb-3">Engineer &amp; Designer</div>
+                <div class="tagline mb-3">Engineer &amp; Researcher</div>
                 <div class="bio mb-4">
-                    <p>
-                        I am a multi-disciplinary Engineer with a BSc degree in Mechanical Engineering & Physics from MIT and 
-                        currently pursuing a Master's degree in Mechanical Engineering at Imperial College London. I am interested 
-                        in technology for those with neurological and neurodevelopmental disorders. I have tried to design this 
-                        website with accessibility in mind (as the world wide web was originally intended to be). 
-                        This website can be navigated around using screen readers, keyboard controls only or with voice recognition.  
-                    </p>
+                    
+
                     <p>Feel free to <a href="mailto:conorkirby1@gmail.com"> Contact me by email</a></p>
+                    <ul id="socialContainer" class="navbar-nav flex-column text-left">
+                        <li class="social-item">
+                            Connect with me: <a class="social-link" href="https://www.linkedin.com/in/conor-kirby-631b0b124/"><i class="fab fa-linkedin-in fa-fw"></i>LinkedIn</a>
+                        </li>
+                        <li class="social-item">
+                            Code with me: <a class="social-link" href="https://github.com/ckirby19"><i class="fab fa-github fa-fw"></i>Github</a>
+                        </li>
+                        <li class="social-item">
+                            Draw with me: <a class="social-link" href="https://www.artstation.com/ckirby97"><i class="fab fa-artstation fa-fw"></i>ArtStation</a>
+                        </li>
+                    </ul>	
                 </div>
                 <div class="mb-4">
                     <a class="btn btn-secondary mb-3" href="{{ url_for('static',filename='../static/documents/Resume.pdf')}}"><i class="fas fa-file-alt mr-2"></i><span class="d-none d-md-inline">View</span> Resume</a>
@@ -26,6 +70,6 @@
             <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" src="{{ url_for('static',filename='../static/images/me.jpg')}}" alt="A black and white photograph of me in a suit and bowtie">
         </div>
     </div>
-</section>
+</section> -->
 
 {% endblock %}

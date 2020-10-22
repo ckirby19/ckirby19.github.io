@@ -52,62 +52,74 @@
 </div>
 <div class="main-content">
   <div class="portfolio shi">
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
-      <a href="{{ url_for('static', filename='images/shi_collection/RealRobot1.png')}}" data-fancybox="shi_group" data-caption="The original design of the wall climbing robot was
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/shi_collection/RealRobot1.png')}}" data-no-swup data-fancybox="shi_group" data-caption="The original design of the wall climbing robot was
       given to me in photo and CAD form for me to work with">
         <img src="{{ url_for('static', filename='images/shi_collection/RealRobot1.png')}}" alt="A photograph of a 4 wheeled robot with electronics and sensors on top">
       </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
-        <a href="{{ url_for('static', filename='images/shi_collection/blender_design.jpg')}}" data-fancybox="shi_group" data-caption="From the CAD design, I created a simplified
-        design of the robot on Blender for use in the Unity software" >
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/shi_collection/blender_design.jpg')}}" data-no-swup data-fancybox="shi_group" data-caption="From the CAD design, I created a simplified
+        design of the robot in Blender for use in the Unity software" >
           <img src="{{ url_for('static', filename='images/shi_collection/blender_design.jpg')}}" alt="A screenshot of a simplified 4 wheel robot design">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
-        <a href="{{ url_for('static', filename='images/shi_collection/Robot.png')}}" data-fancybox="shi_group" data-caption="The PID controller was designed to minimise both 
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/shi_collection/Robot.png')}}" data-no-swup data-fancybox="shi_group" data-caption="The PID controller was designed to minimise both 
         the distance and angle error, while also maintaining a target velocity" >
           <img src="{{ url_for('static', filename='images/shi_collection/Robot.png')}}" alt="A simple sketch of the line following task">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-        <a href="{{ url_for('static', filename='images/shi_collection/RobotFromBehind.png')}}" data-fancybox="shi_group" data-caption="In order to test the surface adaptive PID versus
-        the classical PID controller, a test was designed where the robot was placed on a triangle shaped peak so each wheel contact point was at an angle. The red line in each wheel is the 
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+      <a href="{{ url_for('static', filename='images/shi_collection/ImageProcessing.png')}}" data-no-swup data-fancybox="shi_group" data-caption="I used a simple computer vision 
+      system, with camera attached to bottom of robot pointing down, calculating angle and distance of black line against the desired red vertical line. The view of the camera is
+      shown in bottom right, and camera bounding box is shown in white under robot" >
+        <img src="{{ url_for('static', filename='images/shi_collection/ImageProcessing.png')}}" alt="Screenshot from simulation, showing camera attached to robot">
+      </a>
+    </div>
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 6;">
+        <a href="{{ url_for('static', filename='images/shi_collection/RobotFromBehind.png')}}" data-no-swup data-fancybox="shi_group" data-caption="In order to test the surface adaptive PID versus
+        the classical PID controller,  the robot was placed on a triangle shaped peak so each wheel contact point was at an angle. The red line in each wheel is the 
         normal vector to the surface" >
           <img src="{{ url_for('static', filename='images/shi_collection/RobotFromBehind.png')}}" alt="A 4 wheeled robot on a triangle surface, with the middle of the robot over the triangle
           peak, which has a black line over it">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
-        <a href="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" data-fancybox="shi_group" data-caption="For the case where the robot velocity vector
-        is into the page, and wheel is rotating about an axis pointing to the left,  the angle between the red line and a vector opposing gravity gives the factor used for the surface adaptive PID" >
-          <img src="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" alt="Zoom in on one of the spherical wheels, with lines indicating important vectors">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" data-no-swup data-fancybox="shi_group" data-caption="For the case where the robot velocity vector
+        is into the page, and wheel is rotating about an axis pointing to the left,  the angle between the red line normal to the surface and a vector opposing gravity gives the factor used for the surface adaptive PID" >
+          <img src="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" alt="Zoom in on one of the spherical wheels, with lines indicating vectors">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
-      <a href="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" data-fancybox="shi_group" data-caption="For the case where the robot velocity vector
-      is into the page, and wheel is rotating about an axis pointing to the left,  the angle between the red line and a vector opposing gravity gives the factor used for the surface adaptive PID" >
-        <img src="{{ url_for('static', filename='images/shi_collection/WheelCloseUpWithLine.png')}}" alt="Zoom in on one of the spherical wheels, with lines indicating important vectors">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+      <a href="{{ url_for('static', filename='images/shi_collection/WallClimbing.png')}}" data-no-swup data-fancybox="shi_group" data-caption="This image shows part
+      of the work on a line following algorithm for when the robot is climbing a wall. At the moment, the robot changes its pose to be normal
+      to the wall, completes the transition, then continues following the line">
+        <img src="{{ url_for('static', filename='images/shi_collection/WallClimbing.png')}}" alt="A robot climbing a wall, with two wheels on ground and 2 on the wall">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-      <a href="{{ url_for('static', filename='images/shi_collection/ImageProcessing.png')}}" data-fancybox="shi_group" data-caption="My Caption3" >
-        <img src="{{ url_for('static', filename='images/shi_collection/ImageProcessing.png')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/shi_collection/Distance.png')}}" data-no-swup data-fancybox="shi_group" data-caption="Four plots from a line following test using a standard PID
+      controller. The robot oscillates about the target position if the damping is zero or small, and the rise time is affected by the natural frequency " >
+        <img src="{{ url_for('static', filename='images/shi_collection/Distance.png')}}" alt="Four plots of the robots distance error over time in a square shape">
       </a>
     </div>
     <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
-      <a href="{{ url_for('static', filename='images/shi_collection/PerlinNoise.png')}}" data-fancybox="shi_group" data-caption="My Caption4" >
-        <img src="{{ url_for('static', filename='images/shi_collection/PerlinNoise.png')}}" alt="Dummy Image">
+      <a href="{{ url_for('static', filename='images/shi_collection/PerlinNoise.png')}}" data-no-swup data-fancybox="shi_group" data-caption="The line following algorithm was tested
+      on a variety of surfaces, using a ground surface with a height profile defined by Perlin Noise" >
+        <img src="{{ url_for('static', filename='images/shi_collection/PerlinNoise.png')}}" alt="Robot shown on smooth surface and bumpy surface">
       </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 2;">
-        <a href="{{ url_for('static', filename='images/shi_collection/Speed.png')}}" data-fancybox="shi_group" data-caption="My Caption4" >
-          <img src="{{ url_for('static', filename='images/shi_collection/Speed.png')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/shi_collection/Speed.png')}}" data-no-swup data-fancybox="shi_group" data-caption="Steady state error was significantly 
+        better when the robot compensated for the surface bumpiness" >
+          <img src="{{ url_for('static', filename='images/shi_collection/Speed.png')}}" alt="A plot, with 2 lines, Normal compensation On line below the other">
         </a>
     </div>
-    <div class="portfolio-item" style="grid-row: span 2;grid-column: span ;">
-        <a href="{{ url_for('static', filename='images/shi_collection/Speed2.png')}}" data-fancybox="shi_group" data-caption="My Caption4" >
-          <img src="{{ url_for('static', filename='images/shi_collection/Speed2.png')}}" alt="Dummy Image">
+    <div class="portfolio-item" style="grid-row: span 2;grid-column: span 4;">
+        <a href="{{ url_for('static', filename='images/shi_collection/Speed2.png')}}" data-no-swup data-fancybox="shi_group" data-caption="Rise Time was also significantly 
+        reduced when the robot compensated for the surface bumpiness, although further tests were needed to understand the relationship" >
+          <img src="{{ url_for('static', filename='images/shi_collection/Speed2.png')}}" alt="A plot, with 2 lines, Normal compensation On line below the other ">
         </a>
     </div>
   </div>
