@@ -15,7 +15,7 @@
     <!-- My Icon-->
     <link rel="shortcut icon" href="{{url_for('static', filename='images/cog.ico')}}">
     <title>
-        ABOUT ME | Conor Kirby
+        Conor Kirby
     </title>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -26,51 +26,58 @@
 <body>
     <header>
         <div id="navigation">
-            <div class="logo">
-                <img src="{{url_for('static', filename='images/mylogo-centred.jpg')}}" alt="A handshake between a human and robot hand, forming the shape of a heart"></img>
+            <div class="mobile-visible">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='images/mylogo-centred.jpg')}}" alt="A handshake between a human and robot hand, forming the shape of a heart"></img>
+                </div>
+                <span class="navbar-toggle" id="js-navbar-toggle" onclick="showLinks()">
+                    <i class="fas fa-bars"></i>
+                </span>
             </div>
-            <div class ="my-name">
-                Conor Kirby
+            <div id="invisible" class="mobile-invisible">
+                <div class ="my-name">
+                    Conor Kirby
+                </div>
+                <button class = "mic-button" onclick=record() onkeypress=record() aria-label="Voice Navigation">
+                    <img id="changingImage" src="{{url_for('static', filename='images/microphone.svg')}}" alt="A small image of a microphone. Click to navigate by voice">
+                </button>
+                <span>
+                    <a class="nav-link active" href="/home"><i class="fas fa-user"></i><p>About me <br> əˈbaʊt mi</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/portfolio"><i class="fas fa-laptop-code"></i><p>Portfolio <br> pɔːtˈfəʊliəʊ </p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/other"><i class="fas fa-laptop-code"></i><p>Other Sites <br> ˈʌðə saɪts</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/spring"><i class="fas fa-laptop-code"></i><p>Spring<br> sprɪŋ </p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/augmented"><i class="fas fa-laptop-code"></i><p>Augmented<br> ɔːgˈmɛntɪd </p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/moonshot"><i class="fas fa-laptop-code"></i><p>Robot 1<br> ˈrəʊbɒt wʌn</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/yoyo"><i class="fas fa-cogs"></i><p>Yo-yo <br> jəʊ-jəʊ</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/SHI"><i class="fas fa-cogs"></i><p>Robot 2<br> ˈrəʊbɒt tuː</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/DSC"><i class="fab fa-accessible-icon"></i><p>Volunteer<br> ˌvɒlənˈtɪə</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/infinity"><i class="fas fa-brush"></i><p>Infinity <br> ɪnˈfɪnɪti </p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/ligo"><i class="fas fa-tape"></i><p>Physics 1 <br> ˈfɪzɪks wʌn</p></a>
+                </span>
+                <span>
+                    <a class="nav-link" href="/muon"><i class="fas fa-tape"></i><p>Physics 2 <br> ˈfɪzɪks tu:</p></a>
+                </span>
             </div>
-            <button class = "mic-button" onclick=record() onkeypress=record() aria-label="Voice Navigation">
-                <img id="changingImage" src="{{url_for('static', filename='images/microphone.svg')}}" alt="A small image of a microphone. Click to navigate by voice">
-            </button>
-            <span>
-                <a class="nav-link active" href="/home"><i class="fas fa-user"></i><p>About me <br> əˈbaʊt mi</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/portfolio"><i class="fas fa-laptop-code"></i><p>Portfolio <br> pɔːtˈfəʊliəʊ </p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/other"><i class="fas fa-laptop-code"></i><p>Other Sites <br> ˈʌðə saɪts</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/spring"><i class="fas fa-laptop-code"></i><p>Spring<br> sprɪŋ </p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/augmented"><i class="fas fa-laptop-code"></i><p>Augmented<br> ɔːgˈmɛntɪd </p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/moonshot"><i class="fas fa-laptop-code"></i><p>Robot 1<br> ˈrəʊbɒt wʌn</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/yoyo"><i class="fas fa-cogs"></i><p>Yo-yo <br> jəʊ-jəʊ</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/SHI"><i class="fas fa-cogs"></i><p>Robot 2<br> ˈrəʊbɒt tuː</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/DSC"><i class="fab fa-accessible-icon"></i><p>Volunteer<br> ˌvɒlənˈtɪə</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/infinity"><i class="fas fa-brush"></i><p>Infinity <br> ɪnˈfɪnɪti </p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/ligo"><i class="fas fa-tape"></i><p>Physics 1 <br> ˈfɪzɪks wʌn</p></a>
-            </span>
-            <span>
-                <a class="nav-link" href="/muon"><i class="fas fa-tape"></i><p>Physics 2 <br> ˈfɪzɪks tu:</p></a>
-            </span>
         </div>
     </header>
     <main id="swup" class="transition-fade">
@@ -99,6 +106,7 @@
     <!-- <script src="{{ url_for('static',filename='../static/scripts/mobile_menu.js')}}"></script>   --> 
     <script defer src="{{ url_for('static',filename='../static/scripts/my_transition.js')}}"></script> 
     <script src="{{ url_for('static',filename='../static/scripts/voice_recognition.js')}}"></script>
+    <script src="{{ url_for('static',filename='../static/scripts/for_mobile.js')}}"></script>
     
 </body>
 </html> 

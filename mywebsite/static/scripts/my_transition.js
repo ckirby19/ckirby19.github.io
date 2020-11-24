@@ -124,6 +124,7 @@ function init() {
         $(this).attr('href', href.replace('badmail.', ''));
     });
 
+    
       
 }
 
