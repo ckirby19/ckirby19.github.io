@@ -1,6 +1,5 @@
 // Portfolio Images
 if (document.getElementById("myBtnContainer") != null){
-  console.log("HEREEEE")
   filterSelection("all") // Execute the function and show all columns
 }
 

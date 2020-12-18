@@ -1,7 +1,63 @@
 {% extends "base.html" %}
+
+{% block title %}
+Conor Kirby - Other Sites
+{% endblock %}
+
+
 {% block content %}
 
 <h1>Other Sites</h1>
 
-<h2>Under Construction :D </h2>
+<div class="main-content">
+    <h2>Accessible Website Design</h2>
+    <table class="other-websites">
+      <caption> A collection of resources for accessible design</caption>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Brief Description</th>
+      </tr>
+      <tr>
+        <td><a class="website-link" href="http://www.sussex.ac.uk/tel/resource/tel_website/accessiblecontrast/?q">Accessible Colour Contrast</a></td>
+        <td>Sussex University</td>
+        <td>Simple guide to colour combinations that provide the contrast needed for readability for all users</td>
+      </tr>
+      <tr>
+        <td><a class="website-link" href="https://css-tricks.com/improving-accessibility-24-ways/">Improving the Accessibility of 24 ways</a></td>
+        <td>CSS - Tricks, Paul Robert Lloyd</td>
+        <td>Describing the steps one can take to improve the accessibility of a website</td>
+      </tr>
+      <tr>
+        <td><a class="website-link" href="https://youtu.be/HtTyRajRuyY">Introducing A11ycasts</a></td>
+        <td>Google Chrome Developers, Rob Dodson</td>
+        <td>A YouTube playlist focused on Accessible website design </td>
+      </tr>
+      <tr>
+        <td><a class="website-link" href="https://wave.webaim.org/">WAVE Web Accessibility Evaluation Tool</a></td>
+        <td>WAVE</td>
+        <td>A Google Chrome Extension that can analyse several aspects of a website, such as contrast and alternative text, and tell you whether it meets WCAG standards</td>
+      </tr>
+      <tr>
+        <td><a class="website-link" href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a></td>
+        <td>World Wide Web Consortium</td>
+        <td>The official guideline on website design standards</td>
+      </tr>
+    </table>
+    
+    <h2>Inspiring Voices</h2>
+    <table class="other-websites">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Brief Description</th>
+      </tr>
+      <tr>
+        <td><a class="website-link" href="https://coolblindtech.com/">Cool Blind Tech</a></td>
+        <td>Nelson Régo</td>
+        <td>Assistive Tech news, on a very easy to use and adaptable website </td>
+      </tr>
+    </table>
+    
+</div>
 {% endblock %}

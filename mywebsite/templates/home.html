@@ -1,15 +1,76 @@
 {% extends "base.html" %}
+{% block title %}
+Conor Kirby - About Me
+{% endblock %}
+
 {% block content %}
 
 <h1>About Me</h1>
 
 <div class="main-content">
     <div class="profile">
-        <div class="textblock">
-            <h2 class="name">Conor Kirby</h2>
-            <div class="tagline">Engineer &amp; Researcher</div>
-            <div class="bio">
+        <div class="profile-image">
+            <img src="{{ url_for('static',filename='../static/images/me.jpg')}}" alt="A black and white photograph of me in a suit and bowtie">
+        </div>
+        <div class="break"></div>
+        <div class="name">Conor Kirby</div>
+        <div class="break"></div>
+        <div class="tagline">Mechanical Engineer</div>
+        <div class="break"></div>
+        <div class="bio">
+            <h2><u>My Design Philosophy</u></h2>
+            <p>
+                Designing with accessibility in mind always leads to better design. As an engineer and creator, it is my responsibility to ensure
+                that what I create can be used by everyone. 
+            </p>
+            <p>
+                When it came time to redesigning my engineering portfolio, I realised that it was the perfect opportunity to explore accessible web design, with the goal of 
+                understanding what the digital world looks and feels like for other people.
+            </p>
+            <p>
+                Below I describe some of the accessible features and tools that I use, and why they are important. 
+            </p>
+        </div>
+        <div class="break"></div>
+        <div class="learning navigation">
+            <i class="fas fa-mouse"></i>
+            <div class="learning-title">Navigation</div>
+            <div class="textblock">
                 <p>
+                    <u>Tools</u>
+                </p>
+                <p>
+                    <u>Why It Matters</u>
+                </p> 
+            </div>
+        </div>
+        <div class="learning fonts">
+            <i class="fas fa-text-height"></i>
+            <div class="learning-title">Fonts</div>
+            <div class="textblock">
+                <p>
+                    <u>Tools</u>
+                </p>
+                <p>
+                    <u>Why It Matters</u>
+                </p> 
+            </div>
+        </div>   
+        <div class="learning screen-readers">
+            <i class="fas fa-book-reader"></i>
+            <div class="learning-title">Screen Readers</div>
+            <div class="textblock">
+                <p>
+                    <u>Tools</u>
+                </p>
+                <p>
+                    <u>Why It Matters</u>
+                </p> 
+            </div>
+        </div>
+        </div>
+    </div>
+                <!-- <p>
                     I am a multi-disciplinary Engineer with a BSc in Mechanical Engineering & Physics from MIT and 
                     currently pursuing a MSc in Advanced Mechanical Engineering at Imperial College London. 
                 </p>
@@ -33,44 +94,11 @@
                     <li class="social-item">
                         Draw with me: <a class="social-link" href="https://www.artstation.com/ckirby97"><i class="fab fa-artstation fa-fw"></i><b>ArtStation</b></a>
                     </li>
-                </ul>
-            </div>
+                </ul> -->
         </div>
-        <div class="profile-image">
-            <img src="{{ url_for('static',filename='../static/images/me.jpg')}}" alt="A black and white photograph of me in a suit and bowtie">
-        </div>
+        
     </div>
 </div>
 
-<!-- <section class="about-me-section p-3 p-lg-5 theme-bg-light">
-    <div class="container">
-        <div class="profile-teaser media flex-column flex-lg-row"> 
-            <div class="media-body">
-                <h2 class="name font-weight-bold mb-1">Conor Kirby</h2>
-                <div class="tagline mb-3">Engineer &amp; Researcher</div>
-                <div class="bio mb-4">
-                    
-
-                    <p>Feel free to <a href="mailto:conorkirby1@gmail.com"> Contact me by email</a></p>
-                    <ul id="socialContainer" class="navbar-nav flex-column text-left">
-                        <li class="social-item">
-                            Connect with me: <a class="social-link" href="https://www.linkedin.com/in/conor-kirby-631b0b124/"><i class="fab fa-linkedin-in fa-fw"></i>LinkedIn</a>
-                        </li>
-                        <li class="social-item">
-                            Code with me: <a class="social-link" href="https://github.com/ckirby19"><i class="fab fa-github fa-fw"></i>Github</a>
-                        </li>
-                        <li class="social-item">
-                            Draw with me: <a class="social-link" href="https://www.artstation.com/ckirby97"><i class="fab fa-artstation fa-fw"></i>ArtStation</a>
-                        </li>
-                    </ul>	
-                </div>
-                <div class="mb-4">
-                    <a class="btn btn-secondary mb-3" href="{{ url_for('static',filename='../static/documents/Resume.pdf')}}"><i class="fas fa-file-alt mr-2"></i><span class="d-none d-md-inline">View</span> Resume</a>
-                </div>
-            </div>
-            <img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" src="{{ url_for('static',filename='../static/images/me.jpg')}}" alt="A black and white photograph of me in a suit and bowtie">
-        </div>
-    </div>
-</section> -->
 
 {% endblock %}

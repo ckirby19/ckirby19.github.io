@@ -1,0 +1,34 @@
+/* IF MOBILE, CHANGE HEADING TO TOP, PAGE TO FULL WIDTH AND ADD BUTTON TO BRING DOWN NAVIGATION*/
+header {
+    position: relative;
+    width: 100%;
+    height: var(--header-margin)
+}
+header.shown{
+    height: 50%;
+}
+main {
+    padding-left: 0;
+    padding-top: var(--header-margin)
+}
+.mobile-visible{
+    flex-direction: row;
+}
+.mobile-invisible{
+    display: none;
+}
+.navbar-toggle{
+    display: block;
+    justify-content: end;
+}
+
+.mobile-invisible.shown{
+    display: flex;
+}
+
+.logo img{
+    margin-top: 0px;
+    margin-left: none;
+    margin-right: none;
+}
+

@@ -47,18 +47,6 @@ def moonshot():
 def infinity():
     return render_template("infinity.html")
 
-@app.route("/resume")
-def resume():
-    return render_template("resume.html")
-
-@app.route("/saos")
-def saos():
-    return render_template("saos.html")
-
-@app.route("/feedback")
-def feedback():
-    return render_template("feedback.html")
-
 @app.route("/other")
 def other():
     return render_template("other.html")
