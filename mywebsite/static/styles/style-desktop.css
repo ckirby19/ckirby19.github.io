@@ -33,6 +33,10 @@ main {
     z-index: 1;
 }
 
+/* .gcse-search {
+    padding-left: max(var(--header-margin-min),var(--header-margin));
+} */
+
 /* Navigation Bar */
 
 #navigation {
@@ -248,6 +252,9 @@ h1:after {
 
 /* Portfolio */
 
+.textblock{
+    text-align: left;
+}
 
 .filter-container {
     /* padding-left: 20%;
